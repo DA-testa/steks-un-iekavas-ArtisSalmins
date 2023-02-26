@@ -24,7 +24,14 @@ def find_mismatch(text):
 
 
 def main():
-    text = input()
+    text = ""
+    input_method = input()
+    if input_method == "F":
+        filepath = input()
+        with open(filepath, 'r', encoding='UTF-8') as file:
+            text = file.read().rstrip()
+    elif input_method == "I":
+        text = input()
     mismatch = find_mismatch(text)
     print(mismatch)
 
