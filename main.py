@@ -18,9 +18,9 @@ def find_mismatch(text):
         if next_bracket in ")]}":
             if not opening_brackets_stack or not are_matching(opening_brackets_stack[-1], next_bracket):
                 return i+1
-
             opening_brackets_stack = opening_brackets_stack[:-1]
-    return "Success" if not opening_brackets_stack else i+1
+
+    else: return "Success" if not opening_brackets_stack else i+1
 
 
 def main():
